@@ -1,0 +1,20 @@
+table td {
+    padding: 10px;
+    /* get light gray for background*/
+    background-color: rgb(231, 231, 231);
+    /* text color to be green tint */
+    color: rgb(0, 83, 109);
+
+    /* thin gray border at left and bottom of data */
+    border-right: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+    
+}
+
+.active {
+    background-color: cyan;
+}
+
+.normal:hover {
+    background-color: white;
+}
