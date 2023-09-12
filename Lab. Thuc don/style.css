@@ -15,6 +15,28 @@ table td {
     background-color: cyan;
 }
 
-.normal:hover {
+.active:hover {
+    background-color: cyan;
+}
+
+
+td:hover {
     background-color: white;
+}
+
+#container {
+    display: flex;
+}
+
+#menu {
+    
+    /* ... Your existing table styles ... */
+}
+
+#selected-info {
+    
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
 }
