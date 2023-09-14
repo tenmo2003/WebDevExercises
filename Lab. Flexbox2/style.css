@@ -1,8 +1,8 @@
 body {
     max-width: 900px;
     margin: 0 auto;
-    margin-top: 30px;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
 }
 
 .roundbox {
@@ -48,3 +48,12 @@ footer {margin-top:10px;}
     flex:1;
 }
 
+@media (max-width: 767px) {
+    .main {
+        flex-direction: column-reverse;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
