@@ -17,8 +17,13 @@ div.flexbox1 {
     margin-top: 20px;
     margin-inline: 10px;
     display:flex;
-    flex-direction: row;
-    gap:10px
+    gap:10px;
+}
+
+#child-container {
+    display:flex;
+    flex:1;
+    gap:10px;
 }
 
 #item1 {
@@ -34,8 +39,23 @@ div.flexbox1 {
 }
 
 #item3 {
-    flex:3;
+    flex:1;
     padding:10px;
     background-color: cyan;
 }
 
+@media (max-width: 767px) {
+    #main {
+        display: block;
+    }
+
+    #child-container > * {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    #child-container {
+        display: block;
+    }
+}
