@@ -1,0 +1,73 @@
+<!DOCTYPE HTML><html><head>
+	<META http-equiv='Content-Type' content="text/html" charset ="UTF-8">
+	<style type="text/css">
+		.thucdon-binhthuong {
+			background-color: #cccccc;
+			border-left: solid 1px #dcdcdc;
+			border-right: solid 1px #dcdcdc;
+			border-top: solid 1px #dddddd;
+			border-bottom: solid 0px #dddddd;
+		}
+		.thucdon-duocchon {
+			background-color: #00ffff;
+			border-left: solid 1px #dcdcdc;
+			border-right: solid 1px #dcdcdc;
+			border-top: solid 1px #dddddd;
+			border-bottom: solid 0px #dddddd;
+		}
+		.thucdon-dechuot {
+			background-color: #fcfcfc;
+			border-left: solid 1px #dcdcdc;
+			border-right: solid 1px #dcdcdc;
+			border-top: solid 1px #dddddd;
+			border-bottom: solid 0px #dddddd;
+			cursor:pointer;
+		}
+	</style>
+</head><body>
+	<table cellpadding="2" cellspacing="0">
+		<tr>
+			<td id="m1" class="thucdon-binhthuong" onmouseover="javascript:MO(this);" onmouseout="javascript:MOut(this);" onclick="javascript:MC(this);">VnExpress</td>
+			<td id="m2" class="thucdon-binhthuong" onmouseover="javascript:MO(this);" onmouseout="javascript:MOut(this);" onclick="javascript:MC(this);">Dantri</td>
+			<td id ="m3" class="thucdon-binhthuong" onmouseover="javascript:MO(this);" onmouseout="javascript:MOut(this);" onclick="javascript:MC(this);">VOANews</td>
+			<td id="m4" class="thucdon-binhthuong" onmouseover="javascript:MO(this);" onmouseout="javascript:MOut(this);" onclick="javascript:MC(this);">Zing</td>
+		</tr>
+	</table>
+	<hr>
+	
+	<iframe id="myframe" src="https://vnexpress.net" style="height:500px; width:100%;"></iframe>
+	
+	<script type="text/javascript">
+		sel_ = null; //menu duoc chon
+
+		function MO(r) {
+			if (r != sel_) r.className = "thucdon-dechuot";			
+		}
+
+		function MOut(r) {
+			if (r != sel_) r.className = "thucdon-binhthuong";			
+		}
+
+		function MC(r) {
+			if (sel_ != null)  //thuc don hien tai duoc chon
+			sel_.className = "thucdon-binhthuong";
+			
+			sel_ = r; //thuc don moi duoc chon
+			sel_.className = "thucdon-duocchon";
+
+			//thuc hien cac viec khi noi dung nay duoc chon
+			//document.getElementById("alo").innerHTML = sel_.innerHTML;
+
+			frm = document.getElementById("myframe");
+			if (sel_.id == "m1") {
+				frm.src = "https://vnexpress.net";
+			} else if (sel_.id == "m2") {
+				frm.src = "https://dantri.com.vn";
+			} else if (sel_.id == "m3") {
+				frm.src = "https://voanews.com";
+			} else if (sel_.id == "m4") {
+				frm.src = "https://zing.vn";
+			}
+		}
+	</script>
+ </body></html>

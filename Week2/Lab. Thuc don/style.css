@@ -28,11 +28,6 @@ td:hover {
     display: flex;
 }
 
-#menu {
-    
-    /* ... Your existing table styles ... */
-}
-
 #selected-info {
     
     padding: 10px;
