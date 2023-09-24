@@ -1,0 +1,37 @@
+th, td {
+    border: 1px solid black;
+    margin: 0;
+}
+
+th {
+    background-color: #fc05a9;
+    margin: 0;
+}
+
+.even {
+    background-color: #f0f0f0;
+}
+
+.odd {
+    background-color: #bababa;
+}
+
+.hovered {
+    background-color: rgb(0, 255, 0);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.selected {
+    background-color: yellow;
+}
+
+.hidden {
+    display: none;
+}
+
+#button-container {
+    height: 25px;
+}

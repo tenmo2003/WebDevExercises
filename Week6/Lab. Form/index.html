@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Vũ Ngọc Anh">
+    <link rel="stylesheet" href="style.css">
     <title>Form</title>
 </head>
+
 <body>
-    
+    <div>
+        <label for="name">Họ tên:</label>
+        <input class="required" type="text" id="name">
+        <span id="nameError"></span>
+    </div>
+    <div>
+        <label for="address">Địa chỉ:</label>
+        <input type="text" id="address">
+    </div>
+    <div>
+        <label for="sex">Giới tính:</label>
+        <input type="radio" id="male" name="sex">
+        <label for="male">Nam</label>
+        <input type="radio" id="female" name="sex">
+        <label for="female">Nữ</label>
+    </div>
+
+    <div class="clr"></div>
+
+    <div>
+        <label for="dob">Ngày sinh:</label>
+        <input class="required" type="text" id="dob" placeholder="nn/tt/nnnn">
+        <span id="dobError"></span>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input class="required" type="text" id="email">
+        <span id="emailError"></span>
+    </div>
+    <div>
+        <label for="phone">Điện thoại:</label>
+        <input type="tel" id="phone">
+    </div>
+    <div>
+        <label for="enrolls">Khoá đăng ký:</label>
+        <input type="checkbox" id="eng" name="enrolls">
+        <label for="eng">Tiếng Anh</label>
+        <input type="checkbox" id="management" name="enrolls">
+        <label for="management">Quản trị</label>
+        <input type="checkbox" id="IT" name="enrolls">
+        <label for="IT">CNTT</label>
+    </div>
+    <div class="clr"></div>
+    <div>
+        <label for="username">Tên sử dụng:</label>
+        <input class="required" type="text" id="username">
+        <span id="usernameError"></span>
+    </div>
+    <div>
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password">
+        <span id="passwordError"></span>
+    </div>
+    <div>
+        <label for="confirm">Gõ lại mật khẩu:</label>
+        <input type="password" id="confirm">
+    </div>
+    <div>
+        <label for="notes">Ghi chú:</label>
+        <textarea id="notes"></textarea>
+    </div>
+    <div>
+        <!-- image preview -->
+        <img id="preview" style="margin-left: 125px;">
+    </div>
+    <div>
+        <label for="portrait">Ảnh chân dung:</label>
+        <input type="file" id="portrait" accept=".jpg, .jpeg, .png">
+    </div>
+    <button id="submit" style="margin-left: 125px;">Chấp nhận</button>
+    <button>Bỏ qua</button>
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
