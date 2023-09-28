@@ -23,3 +23,19 @@ h1 {
 figure {
     margin: 0;
 }
+
+@media screen and (max-width:359px) {
+    :root {font-size: 16px;}
+}
+
+@media screen and (min-width:360px) {
+    :root {font-size: calc(16px + 2 * ((100vw - 360px) / 408));}
+    
+}
+@media screen and (min-width:768px) {
+    :root {font-size: calc(18px + 2 * ((100vw - 768px) / 598));}
+}
+
+@media screen and (min-width:1366px) {
+    :root {font-size:20px;}
+}
