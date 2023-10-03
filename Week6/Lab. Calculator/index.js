@@ -4,13 +4,13 @@ var operator = '';
 
 var justPressedOp = false;
 
-const display = document.getElementById('ReadOut');
+const display = document.getElementById('display');
 
 function updateDisplay() {
     display.value = currentInput;
 }
 
-function NumPressed(num) {
+function pressNum(num) {
     if (currentInput === '0') {
         currentInput = num.toString();
     } else {
@@ -21,9 +21,9 @@ function NumPressed(num) {
     updateDisplay();
 }
 
-function Operation(op) {
+function operation(op) {
     if (prevInput !== '' && !justPressedOp) {
-        Equals();
+        equals();
     }
     if (!justPressedOp) {
         prevInput = currentInput;
@@ -34,8 +34,7 @@ function Operation(op) {
     justPressedOp = true;
 }
 
-function Equals() {
-    console.log('Before: ' + prevInput + ' ' + operator + ' ' + currentInput);
+function equals() {
     switch (operator) {
         case '+':
             currentInput = (parseFloat(prevInput) + parseFloat(currentInput)).toString();
@@ -56,39 +55,38 @@ function Equals() {
         default:
             break;
     }
-    console.log('After: ' + currentInput);
     prevInput = '0';
     operator = '=';
     updateDisplay();
 }
 
-function ClearEntry() {
+function clearValue() {
     currentInput = '0';
     updateDisplay();
 }
 
-function Clear() {
+function reset() {
     currentInput = '0';
     prevInput = '';
     operator = '';
     updateDisplay();
 }
 
-function Decimal() {
+function decimal() {
     if (!currentInput.includes('.')) {
         currentInput += '.';
     }
     updateDisplay();
 }
 
-function Neg() {
+function negative() {
     if (currentInput !== '0') {
         currentInput = (-parseFloat(currentInput)).toString();
     }
     updateDisplay();
 }
 
-function Percent() {
+function percent() {
     currentInput = (parseFloat(currentInput) / 100).toString();
     updateDisplay();
 }

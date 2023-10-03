@@ -3,20 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vũ Ngọc Anh">
     <title>Simple Calculator</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 50px;
-        }
-        td {
-            padding: 5px;
-            text-align: center;
-        }
-        input[type="text"] {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <table>
@@ -25,41 +14,41 @@
                 <table>
                     <tr>
                         <td colspan="3">
-                            <input type="text" id="ReadOut" size="24" value="0">
+                            <input type="text" id="display" size="24" value="0">
                         </td>
                         <td></td>
-                        <td><input type="button" id="btnClear" value="C" onclick="Clear()"></td>
-                        <td><input type="button" id="btnClearEntry" value="CE" onclick="ClearEntry()"></td>
+                        <td><input type="button" id="btnClear" value="C" onclick="reset()"></td>
+                        <td><input type="button" id="btnClearEntry" value="CE" onclick="clearValue()"></td>
                     </tr>
                     <tr>
-                        <td><input type="button" id="btn7" value="7" onclick="NumPressed(7)"></td>
-                        <td><input type="button" id="btn8" value="8" onclick="NumPressed(8)"></td>
-                        <td><input type="button" id="btn9" value="9" onclick="NumPressed(9)"></td>
+                        <td><input type="button" id="btn7" value="7" onclick="pressNum(7)"></td>
+                        <td><input type="button" id="btn8" value="8" onclick="pressNum(8)"></td>
+                        <td><input type="button" id="btn9" value="9" onclick="pressNum(9)"></td>
                         <td></td>
-                        <td><input type="button" id="btnNeg" value="+/-" onclick="Neg()"></td>
-                        <td><input type="button" id="btnPercent" value="%" onclick="Percent()"></td>
+                        <td><input type="button" id="btnNeg" value="+/-" onclick="negative()"></td>
+                        <td><input type="button" id="btnPercent" value="%" onclick="percent()"></td>
                     </tr>
                     <tr>
-                        <td><input type="button" id="btn4" value="4" onclick="NumPressed(4)"></td>
-                        <td><input type="button" id="btn5" value="5" onclick="NumPressed(5)"></td>
-                        <td><input type="button" id="btn6" value="6" onclick="NumPressed(6)"></td>
+                        <td><input type="button" id="btn4" value="4" onclick="pressNum(4)"></td>
+                        <td><input type="button" id="btn5" value="5" onclick="pressNum(5)"></td>
+                        <td><input type="button" id="btn6" value="6" onclick="pressNum(6)"></td>
                         <td></td>
-                        <td><input type="button" id="btnPlus" value="+" onclick="Operation('+')"></td>
-                        <td><input type="button" id="btnMinus" value="-" onclick="Operation('-')"></td>
+                        <td><input type="button" id="btnPlus" value="+" onclick="operation('+')"></td>
+                        <td><input type="button" id="btnMinus" value="-" onclick="operation('-')"></td>
                     </tr>
                     <tr>
-                        <td><input type="button" id="btn1" value="1" onclick="NumPressed(1)"></td>
-                        <td><input type="button" id="btn2" value="2" onclick="NumPressed(2)"></td>
-                        <td><input type="button" id="btn3" value="3" onclick="NumPressed(3)"></td>
+                        <td><input type="button" id="btn1" value="1" onclick="pressNum(1)"></td>
+                        <td><input type="button" id="btn2" value="2" onclick="pressNum(2)"></td>
+                        <td><input type="button" id="btn3" value="3" onclick="pressNum(3)"></td>
                         <td></td>
-                        <td><input type="button" id="btnMultiply" value="*" onclick="Operation('*')"></td>
-                        <td><input type="button" id="btnDivide" value="/" onclick="Operation('/')"></td>
+                        <td><input type="button" id="btnMultiply" value="*" onclick="operation('*')"></td>
+                        <td><input type="button" id="btnDivide" value="/" onclick="operation('/')"></td>
                     </tr>
                     <tr>
-                        <td><input type="button" id="btn0" value="0" onclick="NumPressed(0)"></td>
-                        <td><input type="button" id="btnDecimal" value="." onclick="Decimal()"></td>
+                        <td><input type="button" id="btn0" value="0" onclick="pressNum(0)"></td>
+                        <td><input type="button" id="btnDecimal" value="." onclick="decimal()"></td>
                         <td colspan="3"></td>
-                        <td><input type="button" id="btnEquals" value="=" onclick="Equals()"></td>
+                        <td><input type="button" id="btnEquals" value="=" onclick="equals()"></td>
                     </tr>
                 </table>
             </td>
