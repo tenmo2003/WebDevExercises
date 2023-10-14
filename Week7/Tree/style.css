@@ -1,0 +1,27 @@
+.folder {
+    margin-left: 20px;
+}
+
+.folder>input {
+    display: none;
+}
+
+.folder>label {
+    cursor: pointer;
+}
+
+.folder>label:before {
+    content: url('https://itest.com.vn/lects/webappdev/tree/images/plus.gif');
+}
+
+.folder>input:checked+label:before {
+    content: url('https://itest.com.vn/lects/webappdev/tree/images/minus.gif');
+}
+
+.folder .nested {
+    margin-left: 20px;
+}
+
+.active {
+    display:none;
+}

@@ -1,0 +1,31 @@
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+th {
+    background-color: #909090;
+}
+
+table.sortable th.sortcol {
+    cursor: pointer;
+}
+
+table.sortable th.sortcol::after {
+    content: " \2195";
+}
+
+table.sortable th.sortcol.asc::after {
+    content: " \2191";
+    color: red;
+    background-color: yellow;
+}
+
+table.sortable th.sortcol.desc::after {
+    content: " \2193";
+    color: red;
+    background-color: yellow;
+}
